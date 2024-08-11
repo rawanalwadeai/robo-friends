@@ -1,6 +1,6 @@
 import React  , {Component} from 'react'
 
-class errorBoundry extends Component{
+class ErrorBoundry extends Component{
 constructor(props){
     super(props);
     this.state = {
@@ -8,11 +8,11 @@ constructor(props){
     }
 }
 componentDidCatch(error , info){
-    this.setState({hasErro : true})
+    this.setState({hasError : true})
 }
 render(){
     return this.state.hasError ? <h1>There is a problem</h1> : this.props.children;
 }}
 
 
-export default errorBoundry;
+export default ErrorBoundry;
